@@ -1,3 +1,33 @@
-Python string exercise questions for interview
-# symmentric string
+#Python string exercise questions for interview
+# 1. symmentric string
+ str = "amma"
+ l = len(str)
+ if l%2 == 0 :
+     mid = l//2 + 1
+ else:
+     mid = l//2
 
+ start1 = 0
+ start2 = mid
+ flag= 0 
+
+ while start1 < mid and start2 >= l :
+     if start1 == start2 :
+         start1 += 1
+         start2 += 1
+     else:
+         flag = 1
+
+ if flag == 0 :
+     print("string is symmetric")
+ else:
+     print("string not symmetric")
+
+#2 reversing words of given string
+ s = input("Enter string: ")
+ l = []
+ str = s.split()[::-1]
+ for i in str :
+     l.append(i)
+
+ print(" ".join(l))
